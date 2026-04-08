@@ -1,0 +1,85 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 1 (Organic & Earthy)",
+  "design_philosophy": "Premium modern full-screen calendar utilizing Glassmorphism and Organic Earthy trends. The interface must feel grounded, calm, and highly polished, using soft translucent layers over dynamic seasonal nature photography. Avoid sterile grays; rely on warm sand and forest greens.",
+  "colors": {
+    "background_base": "#F9F8F6",
+    "surface_glass": "rgba(249, 248, 246, 0.65)",
+    "surface_glass_hover": "rgba(249, 248, 246, 0.8)",
+    "surface_glass_border": "rgba(255, 255, 255, 0.4)",
+    "text_primary": "#1A2F24",
+    "text_secondary": "#4A5D53",
+    "accent_primary": "#8A9A5B",
+    "accent_secondary": "#E07A5F",
+    "accent_tertiary": "#8DB4CB",
+    "today_indicator": "#E07A5F",
+    "holiday_indicator": "#8DB4CB"
+  },
+  "typography": {
+    "heading_font": "Cabinet Grotesk",
+    "body_font": "Satoshi",
+    "h1": "text-4xl sm:text-5xl font-light tracking-tight text-[#1A2F24]",
+    "h2": "text-2xl sm:text-3xl font-medium tracking-tight text-[#1A2F24]",
+    "h3": "text-xl sm:text-2xl font-medium tracking-tight text-[#1A2F24]",
+    "body": "text-base font-normal leading-relaxed text-[#4A5D53]",
+    "label": "text-xs font-bold uppercase tracking-[0.2em] text-[#8A9A5B]"
+  },
+  "layout_and_spacing": {
+    "container": "h-screen w-full overflow-hidden flex",
+    "grid_structure": "grid grid-cols-1 lg:grid-cols-12 gap-6 h-full p-6 sm:p-8 lg:p-12 z-10 relative",
+    "sidebar": "col-span-1 lg:col-span-3 h-full flex flex-col gap-6",
+    "main_calendar": "col-span-1 lg:col-span-9 h-full flex flex-col",
+    "glass_panel_classes": "bg-white/60 backdrop-blur-2xl border border-white/40 shadow-[0_8px_32px_rgba(26,47,36,0.08)] rounded-3xl p-6 flex flex-col"
+  },
+  "components": {
+    "calendar_grid": {
+      "style": "grid grid-cols-7 gap-2 flex-grow auto-rows-fr",
+      "day_cell": "relative h-full w-full min-h-[100px] flex flex-col p-3 rounded-2xl transition-all duration-300 border border-transparent hover:border-white/60 hover:bg-white/50 hover:shadow-sm cursor-pointer",
+      "today_cell": "border-[#E07A5F]/30 bg-[#E07A5F]/10 font-bold",
+      "selected_cell": "ring-2 ring-[#8A9A5B] bg-white/60",
+      "other_month_cell": "opacity-40 pointer-events-none"
+    },
+    "notes_system": {
+      "style": "Glassmorphism bento box in the sidebar, overflowing with subtle custom scrollbar.",
+      "tags": ["personal", "work", "urgent"],
+      "color_coding": {
+        "personal": "bg-[#8DB4CB]/20 text-[#2C5268]",
+        "work": "bg-[#8A9A5B]/20 text-[#3C4A21]",
+        "urgent": "bg-[#E07A5F]/20 text-[#7A3623]"
+      }
+    },
+    "holiday_integration": {
+      "display": "Small dot indicator on the calendar day. On click, display holiday details beautifully in the sidebar's 'Selected Date' panel.",
+      "indicator_style": "w-1.5 h-1.5 rounded-full bg-[#8DB4CB] absolute bottom-3 right-3 shadow-sm"
+    }
+  },
+  "motion_and_interactions": {
+    "month_transition": "AnimatePresence with Framer Motion. Slide in from left/right (x: 20, opacity: 0 -> x: 0, opacity: 1) with spring physics (stiffness: 300, damping: 30).",
+    "day_hover": "Scale 1.02 on hover, slightly increase brightness of the background glass.",
+    "modal_open": "Fade in overlay, scale up modal from 0.95 to 1.0 with soft spring bounce."
+  },
+  "images": {
+    "background_strategy": "The background must be absolutely positioned, taking up the full screen `w-full h-full object-cover fixed top-0 left-0 -z-10`. Crucially, add a noise overlay and a soft gradient scrim (`bg-gradient-to-br from-[#F9F8F6]/85 via-[#F9F8F6]/60 to-[#F9F8F6]/30`) on top of the image to ensure the calendar UI is readable while retaining the nature aesthetic.",
+    "monthly_mapping": {
+      "0": {"month": "January", "url": "https://images.unsplash.com/photo-1613144332655-8d04c63d635a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwzfHx3aW50ZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "1": {"month": "February", "url": "https://images.unsplash.com/photo-1639443508800-f558a459548d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwyfHx3aW50ZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "2": {"month": "March", "url": "https://images.unsplash.com/photo-1675815584583-341e06e85b01?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHx3aW50ZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "3": {"month": "April", "url": "https://images.unsplash.com/photo-1775127494056-e5facf575a66?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwxfHxzcHJpbmclMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "4": {"month": "May", "url": "https://images.unsplash.com/photo-1773521079770-c6fee7428af0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwyfHxzcHJpbmclMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "5": {"month": "June", "url": "https://images.unsplash.com/photo-1646992236315-55d937a792b3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjV8MHwxfHNlYXJjaHwzfHxzcHJpbmclMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "6": {"month": "July", "url": "https://images.unsplash.com/photo-1691777065847-4c9266ee59fd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "7": {"month": "August", "url": "https://images.unsplash.com/photo-1562867150-eeb92952650f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwxfHxzdW1tZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "8": {"month": "September", "url": "https://images.unsplash.com/photo-1661584687716-e0507b7a3c4f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxzdW1tZXIlMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzM3ww&ixlib=rb-4.1.0&q=85"},
+      "9": {"month": "October", "url": "https://images.unsplash.com/photo-1639182361660-0949c60b82c0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwxfHxhdXR1bW4lMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzMnww&ixlib=rb-4.1.0&q=85"},
+      "10": {"month": "November", "url": "https://images.unsplash.com/photo-1640604614815-706a1ee6997f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzB8MHwxfHNlYXJjaHwyfHxhdXR1bW4lMjBuYXR1cmUlMjBzY2VuZXJ5fGVufDB8fHx8MTc3NTYzNDMzMnww&ixlib=rb-4.1.0&q=85"},
+      "11": {"month": "December", "url": "https://images.unsplash.com/photo-1764082006441-1b66532deb39?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA3MDR8MHwxfHNlYXJjaHwxfHx3aW50ZXIlMjBzbm93c2NhcGUlMjBuYXR1cmV8ZW58MHx8fHwxNzc1NjM0MzI2fDA&ixlib=rb-4.1.0&q=85"}
+    }
+  },
+  "technical_instructions": {
+    "notes_persistence": "Use a custom hook `useLocalStorage` to save and sync notes to `localStorage`. Shape: `{ [dateString]: Note[] }`.",
+    "holidays_dataset": "Hardcode a static array of global holidays and render a dot indicator in `day_cell` when checking `activeDate`.",
+    "testing": "All critical interactive elements MUST have `data-testid` attributes (e.g., `data-testid='calendar-next-month'`, `data-testid='note-input'`).",
+    "icons": "Use `lucide-react` for UI icons (ChevronLeft, ChevronRight, Plus, Calendar, Tag)."
+  }
+}
+
