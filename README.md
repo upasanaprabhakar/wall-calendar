@@ -1,18 +1,22 @@
 # Wall Calendar Application
 
-## Screenshots
-
-![Calendar View](./screenshots/calendar.png)  
-![Range Selection](./screenshots/range.png)  
-![Notes Panel](./screenshots/notes.png)  
-
 ## Overview
 
 The Wall Calendar Application is a modern, interactive web-based calendar built using React. It provides an intuitive interface for managing dates, notes, and holidays while maintaining a clean and visually refined design.
 
 The application emphasizes user experience, structured interaction, and practical functionality such as date selection, range selection, and categorized note management. It is designed to reflect real-world product development standards.
 
-## Features
+
+## Screenshots:
+
+ <img width="1897" height="905" alt="Screenshot 2026-04-08 214457" src="https://github.com/user-attachments/assets/1e3d05d0-45f6-420b-9b35-60673528a8c7" />
+
+ <img width="1898" height="906" alt="Screenshot 2026-04-08 214550" src="https://github.com/user-attachments/assets/f2e2b7b7-d034-41e4-97b5-41396e3e42f9" />
+
+  <img width="1896" height="902" alt="Screenshot 2026-04-08 215056" src="https://github.com/user-attachments/assets/6e1bc629-d7cc-421c-89e5-89065b1e931b" />
+
+
+## Features:
 
 ### Calendar Interface
 - Monthly calendar view with accurate date alignment  
@@ -46,7 +50,7 @@ The application emphasizes user experience, structured interaction, and practica
 - Smooth hover and interaction effects  
 - Clean and minimal visual hierarchy  
 
-## Tech Stack
+## Tech Stack:
 
 - React  
 - JavaScript (ES6+)  
@@ -55,7 +59,7 @@ The application emphasizes user experience, structured interaction, and practica
 - date-fns  
 - Local Storage  
 
-## Project Structure
+## Project Structure:
 
 ```
 src/
@@ -76,7 +80,7 @@ public/
 └── design_guidelines.json
 ```
 
-## Key Implementation Details
+## Key Implementation Details:
 
 ### Dynamic Holiday System
 - Holidays are generated programmatically for any year  
@@ -99,7 +103,7 @@ public/
 - Local storage used for persistence  
 - Clear separation between UI and logic  
 
-## Setup Instructions
+## Setup Instructions:
 
 1. Clone the repository  
 
@@ -125,7 +129,7 @@ npm run dev
 http://localhost:5173
 ```
 
-## Design Approach
+## Design Approach:
 
 The application follows a user-focused design approach with emphasis on clarity, usability, and visual balance.
 
@@ -136,7 +140,7 @@ The application follows a user-focused design approach with emphasis on clarity,
 
 The goal was to create a calendar experience that feels intuitive, modern, and production-ready.
 
-## Future Improvements
+## Future Improvements:
 
 - Drag-based range selection  
 - Range-based note creation  
@@ -144,7 +148,7 @@ The goal was to create a calendar experience that feels intuitive, modern, and p
 - Event indicators inside calendar cells  
 - Export or synchronization features  
 
-## Conclusion
+## Conclusion:
 
 This project demonstrates the ability to build interactive and scalable frontend applications with strong focus on user experience and design consistency.
 
