@@ -174,14 +174,14 @@ const Calendar = () => {
   const monthImageUrl = designGuidelines?.images?.monthly_mapping?.[currentDate.getMonth()]?.url || '';
 
   const getCategoryStyles = (category) => {
-    if (!designGuidelines) return '';
-    const styles = {
-      personal: designGuidelines.components.notes_system.color_coding.personal,
-      work: designGuidelines.components.notes_system.color_coding.work,
-      urgent: designGuidelines.components.notes_system.color_coding.urgent,
-    };
-    return styles[category] || styles.personal;
+  const styles = {
+    personal: 'bg-[#8DB4CB]/20 text-[#2C5268]',
+    work: 'bg-[#8A9A5B]/20 text-[#1A2F24]',
+    urgent: 'bg-[#E07A5F]/20 text-[#7A2E1C]', 
   };
+
+  return styles[category] || styles.personal;
+};
 
   if (!designGuidelines) {
     return (
